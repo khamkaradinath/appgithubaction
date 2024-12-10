@@ -29,10 +29,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Step 4: Add src to PYTHONPATH
-      - name: Set Python path
-        run: echo "PYTHONPATH=${{ github.workspace }}/src" >> $GITHUB_ENV
-
       # Step 5: Run tests
       - name: Run tests
         run: pytest
